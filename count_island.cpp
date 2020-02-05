@@ -140,8 +140,8 @@ vector < island > island::List_Of_Islands {};
 
 int main() {
   vector <vector<int>> vmap  { {1,1,1,0,1,0,0,0},
-							   {0,0,0,0,1,0,1,0},
-							   {1,1,1,0,1,1,1,0}};
+                               {0,0,0,0,1,0,1,0},
+                               {1,1,1,0,1,1,1,0}};
 
   for (auto & vec: vmap) {
     for (auto & p: vec)
