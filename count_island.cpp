@@ -19,7 +19,7 @@ class island
                   auto itr = find_if(List_Of_Islands.begin(), List_Of_Islands.end(), [& ](auto & xx)
                   {
                         return xx.isNearByTop(pointxy);
-	                });
+                  });
 
                   if (itr == List_Of_Islands.end())
                         pTopIsland = nullptr;
@@ -101,7 +101,7 @@ public:
                         pLeftIsland = nullptr;
 
                   i++;
-	          });
+            });
 
             j = 1;
             for_each(next(vmap.begin()), vmap.end(), [& ](auto & yvec)
@@ -140,16 +140,16 @@ public:
                               pLeftIsland = nullptr;
 
                         i++;
-	                });
+                  });
 
                   prevline = &yvec;
                   j++;
-	          });
+            });
 
             return count_if(List_Of_Islands.begin(), List_Of_Islands.end(), [](const auto &ix)
             {
                   return ix.m_point_vec_vec.size() > 0;
-	          });
+            });
       }
 };
 
