@@ -69,7 +69,7 @@ public:
 
       static int GetNumberOfIslands(vector<vector < int>> &vmap)
       {
-            int i = 0, j = 0;
+            int i = 0, j = 0; // i -> x-coordinate, j -> y-coordinate
 
             island *pLeftIsland, *pTopIsland;
             pLeftIsland = pTopIsland = nullptr;
