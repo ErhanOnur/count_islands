@@ -37,7 +37,7 @@ int main()
     cout << endl;
   }
 
-  for (int y = 0 ; y < (int)vmap.size(); y++)
+  for (auto y_itr = vmap.begin() ; y_itr != vmap.end(); ++y_itr)
   {
     auto& vt = *vec_top;
     auto& vc = *vec_current;
@@ -46,14 +46,15 @@ int main()
 
     //cout << "\nanalizing line number " << y+1 << endl;
 
-    for (int x = 0 ; x < (int)vmap[0].size(); x++)
+    for (auto x_itr = y_itr->begin() ; x_itr != y_itr->end(); ++x_itr)
     {
-      int& value = vmap[y][x];
+      int& value = *x_itr;
       //cout << "*** analyzing the point ( " << x << "," << y << ") with value: " << value <<endl; 
 
       if (value)
       {
         island_id left=0, top=0;
+        int x = distance(y_itr->begin(), x_itr);
 
         while (vtop_itr != vt.end())
         {
